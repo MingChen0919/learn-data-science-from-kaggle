@@ -4,7 +4,8 @@
     + [Docker Kaggle Python](https://github.com/kaggle/docker-python)
     + [How to use the docker image](http://blog.kaggle.com/2016/02/05/how-to-get-started-with-data-science-in-containers/)
     + To make it to work for Mac, I have to adjust the code from the "How to" page and add the following code to my `.bash_profile` file.
-    ```bash
+    
+```bash
 kpython(){
   docker run -v $PWD:/tmp/working -w=/tmp/working --rm -it kaggle/python python "$@"
 }
@@ -15,6 +16,7 @@ kjupyter() {
   (sleep 3 && open "http://$(docker-machine ip default):8888")&
   docker run -v $PWD:/tmp/working -w=/tmp/working -p 8888:8888 --rm -it kaggle/python jupyter notebook --allow-root --no-browser --ip="0.0.0.0" --notebook-dir=/tmp/working
 }
-    ```
+```
+
 * [A Data Science Framework: To Achieve 99% Accuracy
 ](https://www.kaggle.com/ldfreeman3/a-data-science-framework-to-achieve-99-accuracy)
