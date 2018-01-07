@@ -18,5 +18,7 @@ kjupyter() {
 }
 ```
 
+**Change directory to any directory that you want to be your working directory and run `kpython` as a replacement for calling `python`, `ikpython` for `ipython`, and `kjupyter` for `jupyter`.**
+
 * [A Data Science Framework: To Achieve 99% Accuracy
 ](https://www.kaggle.com/ldfreeman3/a-data-science-framework-to-achieve-99-accuracy)
