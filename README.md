@@ -13,12 +13,11 @@
           docker run -v $PWD:/tmp/working -w=/tmp/working --rm -it kaggle/python ipython
         }
         kjupyter() {
-          (sleep 3 && open "http://$(docker-machine ip default):8888")&
           docker run -v $PWD:/tmp/working -w=/tmp/working -p 8888:8888 --rm -it kaggle/python jupyter notebook --allow-root --no-browser --ip="0.0.0.0" --notebook-dir=/tmp/working
         }
         ```
         
-        **Change directory to any directory that you want to be your working directory and run `kpython` as a replacement for calling `python`, `ikpython` for `ipython`, and `kjupyter` for `jupyter`.**
+        **Change directory to any directory that you want to be your working directory and run `kpython` as a replacement for calling `python`, `ikpython` for `ipython`, and `kjupyter` for `jupyter`.** Then you can access your Jupyter notebook through the URL from the output.
         
 * [A Data Science Framework: To Achieve 99% Accuracy
 ](https://www.kaggle.com/ldfreeman3/a-data-science-framework-to-achieve-99-accuracy)
